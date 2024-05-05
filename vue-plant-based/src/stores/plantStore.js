@@ -17,17 +17,17 @@ actions: {
     async getPlants() {
         this.plants = [];
         this.isLoading = true;
-        const res = await fetch(`https://trefle.io/api/v1/plants?token=LfcDOdIZXk36w9xBzf3m_gCxjEPQ2IwjN7SsKDCr3NM`);
+        const res = await fetch(` http://localhost:3000/plants`);
         const data = await res.json();
         
         if (data) {
-            Object.entries(data).forEach(c => {
+            Object.entries(data).forEach(p => {
                 const plant = {
                     ...p[0]
                 };
-                this.courses.push(plant);
+                this.plants.push(plant);
             });
-            console.log(data[0]);
+            console.log(data);
         }
         this.isLoading = false;
     },
