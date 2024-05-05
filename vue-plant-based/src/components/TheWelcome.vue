@@ -8,81 +8,121 @@ import SupportIcon from './icons/IconSupport.vue'
 </script>
 
 <template>
-  <WelcomeItem>
-    <template #icon>
-      <DocumentationIcon />
-    </template>
-    <template #heading>Documentation</template>
+  <div id="welcome-container">
+    <div id="welcome-illustration">
+      <img alt="Vue logo" class="logo" src="@/assets/undraw_flowers.svg" width="400" height="400" />
+    </div>
+    <div>
+      <WelcomeItem>
+        <template #icon>
+          <DocumentationIcon />
+        </template>
+        <template #heading>
+          Documentation
+        </template>
 
-    Vue’s
-    <a href="https://vuejs.org/" target="_blank" rel="noopener">official documentation</a>
-    provides you with all information you need to get started.
-  </WelcomeItem>
+        Learn about your plants in our
+        <a href="https://vuejs.org/" target="_blank" rel="noopener">
+          huge plant database</a>, which provides you with all information about each of them.
+      </WelcomeItem>
 
-  <WelcomeItem>
-    <template #icon>
-      <ToolingIcon />
-    </template>
-    <template #heading>Tooling</template>
+      <WelcomeItem>
+        <template #icon>
+          <ToolingIcon />
+        </template>
+        <template #heading>
+          Setup
+        </template>
 
-    This project is served and bundled with
-    <a href="https://vitejs.dev/guide/features.html" target="_blank" rel="noopener">Vite</a>. The
-    recommended IDE setup is
-    <a href="https://code.visualstudio.com/" target="_blank" rel="noopener">VSCode</a> +
-    <a href="https://github.com/johnsoncodehk/volar" target="_blank" rel="noopener">Volar</a>. If
-    you need to test your components and web pages, check out
-    <a href="https://www.cypress.io/" target="_blank" rel="noopener">Cypress</a> and
-    <a href="https://on.cypress.io/component" target="_blank" rel="noopener"
-      >Cypress Component Testing</a
-    >.
+        Import your current setup stats:
+        <a href="https://vitejs.dev/guide/features.html" target="_blank" rel="noopener">
+          Humidity
+        </a>,
+        <a href="https://code.visualstudio.com/" target="_blank" rel="noopener">
+          Sunlight
+        </a> or
+        <a href="https://code.visualstudio.com/" target="_blank" rel="noopener">Temperature</a>,
+          which can be used to track the chances of survival for each plant type.
+        <br />
+        More instructions about this are available in <code>README.md</code>.
+      </WelcomeItem>
 
-    <br />
+      <WelcomeItem>
+        <template #icon>
+          <EcosystemIcon />
+        </template>
+        <template #heading>
+          Ecosystem
+        </template>
 
-    More instructions are available in <code>README.md</code>.
-  </WelcomeItem>
+        Track your plants and make them thrive using the free knowledge available.
+        You can set trackers for
+        <a href="https://pinia.vuejs.org/" target="_blank" rel="noopener">Seeding</a>,
+        <a href="https://router.vuejs.org/" target="_blank" rel="noopener">Repotting or feeding</a>,
+        <a href="https://test-utils.vuejs.org/" target="_blank" rel="noopener">Propagating</a>, and
+        <a href="https://github.com/vuejs/devtools" target="_blank" rel="noopener">Healing</a>. If
+        you have plants that bear fruit/veggies you can also control
+        <a href="https://github.com/vuejs/awesome-vue" target="_blank" rel="noopener">Harvests</a>.
+      </WelcomeItem>
 
-  <WelcomeItem>
-    <template #icon>
-      <EcosystemIcon />
-    </template>
-    <template #heading>Ecosystem</template>
+      <WelcomeItem>
+        <template #icon>
+          <CommunityIcon />
+        </template>
+        <template #heading>
+          Community
+        </template>
 
-    Get official tools and libraries for your project:
-    <a href="https://pinia.vuejs.org/" target="_blank" rel="noopener">Pinia</a>,
-    <a href="https://router.vuejs.org/" target="_blank" rel="noopener">Vue Router</a>,
-    <a href="https://test-utils.vuejs.org/" target="_blank" rel="noopener">Vue Test Utils</a>, and
-    <a href="https://github.com/vuejs/devtools" target="_blank" rel="noopener">Vue Dev Tools</a>. If
-    you need more resources, we suggest paying
-    <a href="https://github.com/vuejs/awesome-vue" target="_blank" rel="noopener">Awesome Vue</a>
-    a visit.
-  </WelcomeItem>
+        Need help, or do you want to shaer ideas?
+        <br />
+        Take some advice from your fellow plant based people thanks to pur community features.
+      </WelcomeItem>
 
-  <WelcomeItem>
-    <template #icon>
-      <CommunityIcon />
-    </template>
-    <template #heading>Community</template>
+      <WelcomeItem>
+        <template #icon>
+          <SupportIcon />
+        </template>
+        <template #heading>
+          Support Us
 
-    Got stuck? Ask your question on
-    <a href="https://chat.vuejs.org" target="_blank" rel="noopener">Vue Land</a>, our official
-    Discord server, or
-    <a href="https://stackoverflow.com/questions/tagged/vue.js" target="_blank" rel="noopener"
-      >StackOverflow</a
-    >. You should also subscribe to
-    <a href="https://news.vuejs.org" target="_blank" rel="noopener">our mailing list</a> and follow
-    the official
-    <a href="https://twitter.com/vuejs" target="_blank" rel="noopener">@vuejs</a>
-    twitter account for latest news in the Vue world.
-  </WelcomeItem>
+        </template>
 
-  <WelcomeItem>
-    <template #icon>
-      <SupportIcon />
-    </template>
-    <template #heading>Support Vue</template>
-
-    As an independent project, Vue relies on community backing for its sustainability. You can help
-    us by
-    <a href="https://vuejs.org/sponsor/" target="_blank" rel="noopener">becoming a sponsor</a>.
-  </WelcomeItem>
+        As an independent project, made for the love of plants.
+        Plant Based relies on community backing for its sustainability. You can help
+        us by
+        <a href="https://vuejs.org/sponsor/" target="_blank" rel="noopener">becoming a sponsor</a>.
+      </WelcomeItem>
+    </div>
+  </div>
 </template>
+
+<style scoped>
+#welcome-illustration {
+  line-height: 1.5;
+  max-height: 100vh;
+}
+
+.logo {
+  display: block;
+  margin: 0 auto 2rem;
+}
+
+@media (min-width: 1024px) {
+  #welcome-illustration {
+    display: flex;
+    place-items: center;
+    padding-right: calc(var(--section-gap) / 2);
+  }
+
+  .logo {
+    margin: 0 2rem 0 0;
+  }
+
+  #welcome-illustration .wrapper {
+    display: flex;
+    place-items: flex-start;
+    flex-wrap: wrap;
+  }
+}
+
+</style>
